@@ -27,7 +27,7 @@ WORKDIR /em-dosbox
 RUN ./autogen.sh && emconfigure ./configure --enable-wasm --disable-sync && make
 
 WORKDIR /em-dosbox/src
-RUN wget https://devopsny.com/blog/em_dosbox/tasstim.zip && unzip doom.zip && ./packager.py index tasstim Tass.exe
+RUN wget https://devopsny.com/blog/em_dosbox/tasstim.zip && unzip tasstim.zip && ./packager.py index tasstim Tass.exe
 
 EXPOSE 8000
 
